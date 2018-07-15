@@ -72,7 +72,7 @@ func cleanup(conn redis.Conn, psc redis.PubSubConn) {
 
 func main() {
     app := cli.NewApp()
-    app.Name = "xxx"
+    app.Name = "clipboardsubscriber"
     app.Flags = []cli.Flag{
         cli.StringFlag{
             Name: "protocol",
@@ -112,7 +112,7 @@ func main() {
                 err error
             )
             // setup systray
-            systray.SetTooltip("xxx.go")
+            systray.SetTooltip("clipboardsubscriber")
 
             // start main procedure and signal handler
             sigC := make(chan os.Signal)
